@@ -21,6 +21,7 @@ public class Gastos {
 
     @JoinColumn(name = "familia")
     private Familia familia;
+
     private String concepto;
     private Float cantidad;
     private String ubicacion;
