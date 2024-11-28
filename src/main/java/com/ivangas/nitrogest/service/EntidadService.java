@@ -69,7 +69,7 @@ public class EntidadService {
         e.setCodigo_postal(entidad.getCodigo_postal());
         e.setPais(entidad.getPais());
         e.setNif_cif(entidad.getNif_cif());
-        e.setId_tipo_entidad(entidad.getId_tipo_entidad());
+        e.setTipo(entidad.getTipo());
         e.setWeb(entidad.getWeb());
         return entidadRepository.save(e);
     }

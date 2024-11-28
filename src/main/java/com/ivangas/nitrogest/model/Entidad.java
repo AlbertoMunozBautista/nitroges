@@ -1,9 +1,6 @@
 package com.ivangas.nitrogest.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Entidad {
@@ -21,7 +18,10 @@ public class Entidad {
     private int codigo_postal;
     private String pais;
     private String nif_cif;
-    private String id_tipo_entidad;
+
+    @JoinColumn(name = "id_tipo_entidad")
+    private TipoEntidad tipo;
+
     private String web;
 
 
@@ -106,12 +106,12 @@ public class Entidad {
         this.nif_cif = nif_cif;
     }
 
-    public String getId_tipo_entidad() {
-        return id_tipo_entidad;
+    public TipoEntidad getTipo() {
+        return tipo;
     }
 
-    public void setId_tipo_entidad(String id_tipo_entidad) {
-        this.id_tipo_entidad = id_tipo_entidad;
+    public void setTipo(TipoEntidad tipo) {
+        this.tipo = tipo;
     }
 
     public String getWeb() {

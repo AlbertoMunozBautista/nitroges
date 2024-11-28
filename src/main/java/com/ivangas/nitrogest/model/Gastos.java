@@ -3,6 +3,7 @@ package com.ivangas.nitrogest.model;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 
 import java.util.Date;
 
@@ -14,12 +15,18 @@ public class Gastos {
 
     private Date fecha;
     private String hora;
+
+    @JoinColumn(name = "frecuencia")
     private Frecuencia frecuencia;
+
+    @JoinColumn(name = "familia")
     private Familia familia;
     private String concepto;
     private Float cantidad;
     private String ubicacion;
     private String observacion;
+
+    @JoinColumn(name = "id_entidad")
     private Entidad entidad;
 
     public Long getId() {
