@@ -1,6 +1,5 @@
 package com.ivangas.nitrogest.service;
 
-import com.ivangas.nitrogest.model.Entidad;
 import com.ivangas.nitrogest.model.Ingresos;
 import com.ivangas.nitrogest.repository.IngresosRepository;
 import lombok.extern.slf4j.Slf4j;
