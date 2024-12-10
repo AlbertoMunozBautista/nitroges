@@ -34,7 +34,7 @@ public class EntidadController {
         return entidadService.getEntidad();
     }
 
-    @GetMapping("/{entidad}")
+    @GetMapping("/{id}")
     public ResponseEntity<Entidad> getEntidad(@PathVariable Long id) {
         try {
             Entidad entidad = entidadService.getEntidadById(id);
@@ -44,7 +44,7 @@ public class EntidadController {
         }
     }
 
-    @PutMapping("/{entidad}")
+    @PutMapping("/{id}")
     public Entidad actualizarEntidad(@RequestBody Entidad e) {
         return entidadService.actualizarEntidad(e);
     }

@@ -71,6 +71,7 @@ public class EntidadService {
         e.setNif_cif(entidad.getNif_cif());
         e.setTipo(entidad.getTipo());
         e.setWeb(entidad.getWeb());
+        e.setComentario(entidad.getComentario());
         return entidadRepository.save(e);
     }
 

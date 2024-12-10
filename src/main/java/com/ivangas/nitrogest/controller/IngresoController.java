@@ -17,7 +17,7 @@ public class IngresoController {
 
     public IngresoController(IngresoService ingresoService){this.ingresoService = ingresoService;}
 
-    //guardar entidad
+    //guardar ingreso
     @PostMapping("/insertar-ingreso")
     public ResponseEntity<Ingresos> insertIngreso(@RequestBody Ingresos i) {
         try {
@@ -28,13 +28,13 @@ public class IngresoController {
         }
     }
 
-    // Obtener entidades
+    // Obtener ingresos
     @GetMapping("/obtener-ingresos")
     public List<Ingresos> getIngresos() {
         return ingresoService.getIngresos();
     }
 
-    @GetMapping("/{ingresos}")
+    @GetMapping("/{id}")
     public ResponseEntity<Ingresos> getIngreso(@PathVariable Long id) {
         try {
             Ingresos ingresos = ingresoService.getIngresosById(id);

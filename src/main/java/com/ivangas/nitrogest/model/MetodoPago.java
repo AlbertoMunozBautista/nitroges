@@ -1,17 +1,18 @@
 package com.ivangas.nitrogest.model;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Familia {
+public class MetodoPago {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String familia;
+    private String metodoPago;
 
     public Long getId() {
         return id;
@@ -21,11 +22,11 @@ public class Familia {
         this.id = id;
     }
 
-    public String getFamilia() {
-        return familia;
+    public String getMetodoPago() {
+        return metodoPago;
     }
 
-    public void setFamilia(String familia) {
-        this.familia = familia;
+    public void setMetodoPago(String metodoPago) {
+        this.metodoPago = metodoPago;
     }
 }

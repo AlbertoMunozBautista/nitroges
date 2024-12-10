@@ -19,11 +19,12 @@ public class Entidad {
     private String pais;
     private String nif_cif;
 
-    @JoinColumn(name = "id_tipo_entidad")
+    @ManyToOne
+    @JoinColumn(name = "tipo_entidad_id")
     private TipoEntidad tipo;
 
     private String web;
-
+    private String comentario;
 
     // Getters y setters
     public Long getId() {
@@ -66,20 +67,20 @@ public class Entidad {
         this.direccion = direccion;
     }
 
-    public String getProvincia() {
-        return provincia;
-    }
-
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
-    }
-
     public String getCiudad() {
         return ciudad;
     }
 
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
+    }
+
+    public String getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
     }
 
     public int getCodigo_postal() {
@@ -120,5 +121,13 @@ public class Entidad {
 
     public void setWeb(String web) {
         this.web = web;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
     }
 }

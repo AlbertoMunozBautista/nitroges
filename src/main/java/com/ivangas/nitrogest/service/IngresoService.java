@@ -17,31 +17,19 @@ public class IngresoService {
     @Autowired
     private IngresosRepository ingresosRepository;
 
-    /**
-     * Obtener todos los ingresos
-     * @return Ingresos
-     */
+
     public List<Ingresos> getIngresos() {
         log.info("Se obtienen todos los ingresos");
         return ingresosRepository.findAll();
     }
 
-    /**
-     * Guardar Ingresos
-     * @param ingresos
-     * @return Ingresos
-     *
-     */
+
     public Ingresos guardarIngresos(Ingresos ingresos) {
         log.info("Se guarda el ingreso {}", ingresos.getId());
         return ingresosRepository.save(ingresos);
     }
 
-    /**
-     * Se obtiene un ingreso por id
-     * @param id
-     * @return Ingresos
-     */
+
     public Ingresos getIngresosById(Long id){
         log.info("Se obtiene la siguiente entidad: {}", id);
 
@@ -50,11 +38,7 @@ public class IngresoService {
 
     }
 
-    /**
-     * Guardamos el ingreso
-     * @param ingresos
-     * @return ingreso
-     */
+
     public Ingresos actualizarIngreso(Ingresos ingresos) {
         Long idIngreso = ingresos.getId();
         log.info("Se procede a actualizar el ingreso con id: {} ", idIngreso);
@@ -69,5 +53,6 @@ public class IngresoService {
 
         return ingresosRepository.save(i);
     }
+
 
 }

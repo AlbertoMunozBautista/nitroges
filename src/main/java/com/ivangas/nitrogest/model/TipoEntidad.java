@@ -1,9 +1,17 @@
 package com.ivangas.nitrogest.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class TipoEntidad {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String tipo;
+    private String tipoEntidad;
 
     public Long getId() {
         return id;
@@ -13,11 +21,11 @@ public class TipoEntidad {
         this.id = id;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getTipoEntidad() {
+        return tipoEntidad;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setTipoEntidad(String tipoEntidad) {
+        this.tipoEntidad = tipoEntidad;
     }
 }
